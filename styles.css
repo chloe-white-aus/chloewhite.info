@@ -60,7 +60,7 @@ header {
 /* ---------- NAVIGATION ----------
    CCA: small caps, vertical pipe dividers between each item.
    ========================================================================== */
-nav { display: flex; align-items: center; gap: 0; }
+nav { display: flex; align-items: center; gap: 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; }
 
 nav a {
   font-size: 0.68rem;
@@ -74,7 +74,8 @@ nav a {
   border-left: 1px solid #1a1a1a;
 }
 
-nav a:first-child { border-left: none; }
+nav a:first-child { border-left: 1px solid #1a1a1a; }
+nav a:last-child { border-right: 1px solid #1a1a1a; }
 nav a:hover { color: #777; }
 nav a.active {
   background: #1a1a1a;

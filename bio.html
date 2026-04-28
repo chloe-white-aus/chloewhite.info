@@ -22,6 +22,18 @@
       .page-split .page-content { order: 1; }
     }
 
+    /* Desktop: buttons side by side */
+    .bio-download-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .bio-headshot-btn-left { display: none !important; }   /* hide left-col button on desktop */
+    .bio-headshot-btn-right { display: inline-flex; }      /* show right-col button on desktop */
+
+    /* Mobile: stack buttons, restore left-col headshot button */
+    @media (max-width: 1024px) {
+      .bio-download-row { flex-direction: column; align-items: flex-start; }
+      .bio-headshot-btn-left { display: inline-flex !important; }
+      .bio-headshot-btn-right { display: none !important; }
+    }
+
     /* All sizes: image never exceeds 50% of its natural dimensions */
     .page-split .page-image img {
       width: auto;
@@ -44,9 +56,9 @@
     </div>
     <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
     <nav>
-      <a href="index.html">About</a>
-      <a href="bio.html" class="active">Bio</a>
-      <a href="advisory.html">Agency</a>
+      <a href="index.html">Hello</a>
+      <a href="bio.html" class="active">Profile &amp; Bio</a>
+      <a href="advisory.html">Consulting</a>
       <a href="board.html">Board Roles</a>
       <a href="community.html">Community</a>
       <a href="media.html">Media &amp; Speaking</a>
@@ -63,7 +75,8 @@
   <!-- LEFT: Headshot -->
   <div class="page-image" style="display:flex; flex-direction:column; align-items:center; padding:40px 28px 28px;">
     <img src="headshot.png" alt="Chloe White — Headshot">
-    <a href="headshot.png" download="Chloe White Official Headshot.png" class="read-more"
+    <!-- Desktop: headshot button hidden here, shown in right column alongside profile button -->
+    <a href="headshot.png" download="Chloe White Official Headshot.png" class="read-more bio-headshot-btn-left"
        style="margin-top:20px; font-size:0.65rem; display:inline-flex; align-items:center; gap:7px; align-self:center;">
       <svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <line x1="6" y1="1" x2="6" y2="8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -76,6 +89,32 @@
 
   <!-- RIGHT: Official Bio -->
   <div class="page-content">
+
+    <!-- ===== 1-PAGE PROFILE ===== -->
+    <div class="content-block" id="profile-download">
+      <p>A single-page summary of Chloe's career and advisory work, formatted for sharing.</p>
+      <div class="bio-download-row">
+        <a href="260428-Chloe-White-Website-A4-Profile.pdf" download="Chloe White — 1-Page Profile.pdf" class="read-more"
+           style="margin-top:16px; font-size:0.65rem; display:inline-flex; align-items:center; gap:7px; background:#1a1a1a; color:#fff; border-color:#1a1a1a;">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="6" y1="1" x2="6" y2="8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <polyline points="3,6 6,9 9,6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="1.5" y1="11" x2="10.5" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          DOWNLOAD PROFILE
+        </a>
+        <!-- Desktop duplicate of headshot button — hidden on mobile -->
+        <a href="headshot.png" download="Chloe White Official Headshot.png" class="read-more bio-headshot-btn-right"
+           style="margin-top:16px; font-size:0.65rem; display:inline-flex; align-items:center; gap:7px;">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="6" y1="1" x2="6" y2="8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <polyline points="3,6 6,9 9,6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="1.5" y1="11" x2="10.5" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          DOWNLOAD HEADSHOT
+        </a>
+      </div>
+    </div>
 
     <!-- ===== LONG BIO ===== -->
     <div class="content-block" id="long-bio">
