@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media &amp; Speaking — Chloe White</title>
+  <meta name="description" content="Chloe White's international speaking engagements, media appearances, and academic lectures.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+    /* ===== SPEAKING ENQUIRIES BUTTON ===== */
+    .enquiry-btn {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      border: 1.5px solid #1a1a1a;
+      padding: 10px 20px;
+      transition: background 0.2s, color 0.2s;
+      color: #1a1a1a;
+    }
+    .enquiry-btn:hover {
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    /* ===== ACCORDION ===== */
+    .accordion {
+      border-top: 1.5px solid #1a1a1a;
+      margin-top: 8px;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    .accordion-trigger {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a1a1a;
+      text-align: left;
+    }
+
+    .accordion-trigger:hover { color: #555; }
+
+    .accordion-icon {
+      font-size: 1.2rem;
+      font-weight: 300;
+      line-height: 1;
+      flex-shrink: 0;
+      color: #1a1a1a;
+    }
+
+    .accordion-panel {
+      display: none;
+      padding: 0 0 28px 0;
+    }
+
+    .accordion-panel.is-open {
+      display: block;
+    }
+
+    /* ===== ACCORDION PANEL CONTENT ===== */
+    .media-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .media-list li {
+      font-size: 0.84rem;
+      line-height: 1.6;
+      color: #333;
+      padding: 11px 0;
+      border-bottom: 1px solid #ebebeb;
+      display: grid;
+      grid-template-columns: 100px 1fr auto;
+      gap: 14px;
+      align-items: baseline;
+    }
+
+    .media-list li:last-child { border-bottom: none; }
+
+    .media-type {
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #999;
+      padding-top: 2px;
+    }
+
+    .media-title a {
+      color: #1a1a1a;
+      text-decoration: underline;
+      text-decoration-color: #d0d0d0;
+      text-underline-offset: 3px;
+    }
+
+    .media-title a:hover {
+      color: #555;
+      text-decoration-color: #555;
+    }
+
+    .media-outlet {
+      color: #888;
+      font-size: 0.8rem;
+    }
+
+    .media-date {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #bbb;
+      white-space: nowrap;
+    }
+
+    /* ===== STATS TICKER ===== */
+    .ticker-wrap {
+      overflow: hidden;
+      border-top: 1.5px solid #1a1a1a;
+      border-bottom: 1.5px solid #1a1a1a;
+      padding: 16px 0;
+      margin-top: 64px;
+      white-space: nowrap;
+    }
+
+    .ticker-track {
+      display: inline-flex;
+      align-items: center;
+      animation: ticker-scroll 28s linear infinite;
+    }
+
+    .ticker-wrap:hover .ticker-track {
+      animation-play-state: paused;
+    }
+
+    .ticker-item {
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a1a1a;
+      padding: 0 48px;
+    }
+
+    .ticker-sep {
+      color: #ccc;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header>
+  <div class="header-inner">
+    <div class="site-name">
+      <a href="index.html">Chloe White</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="bio.html">Bio</a>
+      <a href="advisory.html">Agency</a>
+      <a href="board.html">Board Roles</a>
+      <a href="community.html">Community</a>
+      <a href="media.html" class="active">Media &amp; Speaking</a>
+      <!-- <a href="ai-stablecoins.html">Research</a> -->
+      <a href="recognition.html">Recognition</a>
+      <!-- <a href="art.html">Art</a> -->
+    </nav>
+  </div>
+</header>
+
+<!-- ========== MEDIA & SPEAKING PAGE ========== -->
+<main class="page-container">
+
+  <!-- ===== INTRO ===== -->
+  <p class="section-label" style="font-size:0.88rem; color:#333;">Media &amp; Speaking</p>
+
+  <div class="content-block">
+    <p>
+      Chloe White is a recurring speaker at the world's most significant fintech stages and her media profile
+      spans national broadcast television, radio, print, and digital. She is represented by the Saxton Group,
+      Australia's premier speakers' bureau.
+    </p>
+    <a class="enquiry-btn" href="https://www.saxton.com.au/speakers/chloe-white" target="_blank" rel="noopener">
+      Speaking Enquiries →
+    </a>
+  </div>
+
+
+  <!-- ===== HIGHLIGHTS ACCORDION ===== -->
+  <h2 class="section-subtitle">Highlights</h2>
+
+  <div class="accordion" id="media-accordion">
+
+    <!-- ===== ROW: TALKS ===== -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" data-target="panel-conferences">
+        Talks
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-panel" id="panel-conferences">
+        <ul class="media-list">
+
+          <li>
+            <span class="media-type">Presentation</span>
+            <span class="media-title">
+              Regulator AMA: Global Policy Trends
+              <span class="media-outlet"> — Web3 Hub, Berlin</span>
+            </span>
+            <span class="media-date">Apr 2026</span>
+          </li>
+          <li>
+            <span class="media-type">Workshop</span>
+            <span class="media-title">
+              Agentic Payments &amp; AI Risk Frameworks (BGIN)
+              <span class="media-outlet"> — Japan Fintech Summit</span>
+            </span>
+            <span class="media-date">Mar 2026</span>
+          </li>
+          <li>
+            <span class="media-type">Roundtable</span>
+            <span class="media-title">
+              Chatham House Regulatory Roundtable: "Next-Gen Compliance"
+              <span class="media-outlet"> — GFTN Forum, Tokyo</span>
+            </span>
+            <span class="media-date">Feb 2026</span>
+          </li>
+          <li>
+            <span class="media-type">Workshop</span>
+            <span class="media-title">
+              Global Stablecoin Policy &amp; the GENIUS Act (BGIN)
+              <span class="media-outlet"> — D.C. Fintech Week</span>
+            </span>
+            <span class="media-date">Oct 2025</span>
+          </li>
+          <li>
+            <span class="media-type">Speaker</span>
+            <span class="media-title">
+              Gulf Regulatory Landscape — 'Regulation as a Product'
+              <span class="media-outlet"> — DECA Global Summit</span>
+            </span>
+            <span class="media-date">Sep 2025</span>
+          </li>
+          <li>
+            <span class="media-type">Presentation</span>
+            <span class="media-title">
+              Global Analysis: Stablecoin Policy and Regulatory Developments
+              <span class="media-outlet"> — GBBC</span>
+            </span>
+            <span class="media-date">Jun 2025</span>
+          </li>
+          <li>
+            <span class="media-type">Presentation</span>
+            <span class="media-title">
+              Stablecoin Policy in UAE &amp; EU: An Update (BGIN)
+              <span class="media-outlet"> — Japan Fintech Week (Remote)</span>
+            </span>
+            <span class="media-date">Mar 2025</span>
+          </li>
+          <li>
+            <span class="media-type">Presentation</span>
+            <span class="media-title">
+              Stablecoin Policy in UAE &amp; EU: An Overview (BGIN)
+              <span class="media-outlet"> — D.C. Fintech Week (Remote)</span>
+            </span>
+            <span class="media-date">Oct 2024</span>
+          </li>
+          <li>
+            <span class="media-type">Panel</span>
+            <span class="media-title">
+              US Politics, Brain Drain, Bitcoin Mining
+              <span class="media-outlet"> — AFR Cryptocurrency Summit 2024</span>
+            </span>
+            <span class="media-date">Sep 2024</span>
+          </li>
+          <li>
+            <span class="media-type">Speaker</span>
+            <span class="media-title">
+              AI in Blockchain (BGIN)
+              <span class="media-outlet"> — Point Zero Forum, Zurich (Remote)</span>
+            </span>
+            <span class="media-date">Jul 2024</span>
+          </li>
+          <li>
+            <span class="media-type">Roundtable</span>
+            <span class="media-title">
+              DFSA Chatham House Roundtable on Tokenisation
+              <span class="media-outlet"> — Dubai Fintech Summit</span>
+            </span>
+            <span class="media-date">May 2024</span>
+          </li>
+          <li>
+            <span class="media-type">Panel</span>
+            <span class="media-title">
+              FIN/SUM — Best Practice Policy and Governance
+              <span class="media-outlet"> — Japan Fintech Summit</span>
+            </span>
+            <span class="media-date">Mar 2024</span>
+          </li>
+          <li>
+            <span class="media-type">Moderator</span>
+            <span class="media-title">
+              Block 10 — Financial Applications Day (BGIN)
+              <span class="media-outlet"> — Japan Fintech Week</span>
+            </span>
+            <span class="media-date">Mar 2024</span>
+          </li>
+          <li>
+            <span class="media-type">Workshop</span>
+            <span class="media-title">
+              AI × Blockchain: An Overhyped Narrative? (BGIN)
+              <span class="media-outlet"> — Japan Fintech Week</span>
+            </span>
+            <span class="media-date">Mar 2024</span>
+          </li>
+          <li>
+            <span class="media-type">Keynote</span>
+            <span class="media-title">
+              School Prefect for Stablecoins
+              <span class="media-outlet"> — Crypto Assembly by Blockchain APAC</span>
+            </span>
+            <span class="media-date">Nov 2023</span>
+          </li>
+          <li>
+            <span class="media-type">Panel</span>
+            <span class="media-title">
+              After the Crypto Winter
+              <span class="media-outlet"> — AFR Cryptocurrency Summit 2023</span>
+            </span>
+            <span class="media-date">Oct 2023</span>
+          </li>
+          <li>
+            <span class="media-type">Presentation</span>
+            <span class="media-title">
+              Potential Points of Failure for Stablecoins
+              <span class="media-outlet"> — TechLab, U.S. Federal Reserve</span>
+            </span>
+            <span class="media-date">Sep 2023</span>
+          </li>
+          <li>
+            <span class="media-type">Panel</span>
+            <span class="media-title">
+              Institutional Adoption of Virtual Assets — Panel Debate
+              <span class="media-outlet"> — Point Zero Forum, Zurich</span>
+            </span>
+            <span class="media-date">Jun 2023</span>
+          </li>
+          <li>
+            <span class="media-type">Fireside</span>
+            <span class="media-title">
+              Bitcoin, Tokenisation and Tech Policy Principles
+              <span class="media-outlet"> — Australian Government (Masked Economist)</span>
+            </span>
+            <span class="media-date">May 2023</span>
+          </li>
+          <li>
+            <span class="media-type">SME Lecture</span>
+            <span class="media-title">
+              Principles for Virtual Asset Policymaking
+              <span class="media-outlet"> — Cambridge University CCAF (CDAR Program)</span>
+            </span>
+            <span class="media-date">Mar 2023</span>
+          </li>
+          <li>
+            <span class="media-type">Panel</span>
+            <span class="media-title">
+              Are Institutions Really into Crypto, or Is It Just Too Small?
+              <span class="media-outlet"> — Singapore Fintech Festival</span>
+            </span>
+            <span class="media-date">Nov 2022</span>
+          </li>
+          <li>
+            <span class="media-type">Guest Lecture</span>
+            <span class="media-title">
+              Blockchain &amp; Digital Assets for Finance
+              <span class="media-outlet"> — University of Technology Sydney (UTS)</span>
+            </span>
+            <span class="media-date">May 2022</span>
+          </li>
+          <li>
+            <span class="media-type">Testimony</span>
+            <span class="media-title">
+              Senate Select Committee: Australia as a Technology and Financial Centre
+              <span class="media-outlet"> — Parliament of Australia</span>
+            </span>
+            <span class="media-date">Aug 2021</span>
+          </li>
+          <li>
+            <span class="media-type">Moderator</span>
+            <span class="media-title">
+              Roundtable: Blockchain and Fintech
+              <span class="media-outlet"> — Intersekt by Fintech Australia, Melbourne</span>
+            </span>
+            <span class="media-date">May 2021</span>
+          </li>
+          <li>
+            <span class="media-type">Keynote</span>
+            <span class="media-title">
+              Blockchain Week Launch with Melbourne Connect
+              <span class="media-outlet"> — Melbourne University</span>
+            </span>
+            <span class="media-date">Mar 2021</span>
+          </li>
+          <li>
+            <span class="media-type">Panel</span>
+            <span class="media-title">
+              Blockchain for Business
+              <span class="media-outlet"> — OECD Blockchain Policy Centre</span>
+            </span>
+            <span class="media-date">Feb 2021</span>
+          </li>
+          <li>
+            <span class="media-type">Fireside</span>
+            <span class="media-title">
+              Blockchain Masterclass with Chloe White and Steve Vallas
+              <span class="media-outlet"> — Swinburne University</span>
+            </span>
+            <span class="media-date">Oct 2020</span>
+          </li>
+          <li>
+            <span class="media-type">Panel</span>
+            <span class="media-title">
+              Cybersecurity × Blockchain (with Senator Bragg)
+              <span class="media-outlet"> — Melbourne University</span>
+            </span>
+            <span class="media-date">Jul 2020</span>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== ROW: JOURNALISM ===== -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" data-target="panel-journalism">
+        Journalism
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-panel" id="panel-journalism">
+        <ul class="media-list">
+          <li>
+            <span class="media-type">Profile</span>
+            <span class="media-title">
+              <a href="https://x.com/GenesisBlockAus/status/1759684783200735328" target="_blank" rel="noopener">This Sydney woman is helping design the rules for crypto</a>
+              <span class="media-outlet"> — Australian Financial Review</span>
+            </span>
+            <span class="media-date">Feb 2024</span>
+          </li>
+          <li>
+            <span class="media-type">Quote</span>
+            <span class="media-title">
+              <a href="https://www.afr.com/markets/equity-markets/crypto-dream-is-being-killed-by-policy-paralysis-20240923-p5kcqz" target="_blank" rel="noopener">Crypto dream is being 'killed' by policy paralysis</a>
+              <span class="media-outlet"> — Australian Financial Review</span>
+            </span>
+            <span class="media-date">Sep 2024</span>
+          </li>
+          <li>
+            <span class="media-type">Quote</span>
+            <span class="media-title">
+              <a href="https://www.afr.com/companies/financial-services/asic-chairman-warns-new-crypto-rules-need-more-time-20231016-p5eclp" target="_blank" rel="noopener">ASIC Chairman Warns New Crypto Rules Need More Time</a>
+              <span class="media-outlet"> — Australian Financial Review</span>
+            </span>
+            <span class="media-date">Oct 2023</span>
+          </li>
+          <li>
+            <span class="media-type">Quote</span>
+            <span class="media-title">
+              <a href="https://cointelegraph.com/magazine/tornado-cash-2-0-the-race-to-build-safe-and-legal-coin-mixers/" target="_blank" rel="noopener">Tornado Cash 2.0</a>
+              <span class="media-outlet"> — Cointelegraph</span>
+            </span>
+            <span class="media-date">Jun 2023</span>
+          </li>
+          <li>
+            <span class="media-type">Media</span>
+            <span class="media-title">
+              <a href="https://www.afr.com/technology/this-fund-just-raised-5m-to-solve-crypto-s-warped-model-20221019-p5br44" target="_blank" rel="noopener">This Fund Just Raised $5m to Solve Crypto's 'Warped' Model</a>
+              <span class="media-outlet"> — Australian Financial Review</span>
+            </span>
+            <span class="media-date">Oct 2022</span>
+          </li>
+          <li>
+            <span class="media-type">Radio</span>
+            <span class="media-title">
+              <a href="https://www.abc.net.au/radionational/programs/drive/government-to-regulate-crypto-market-/101358956" target="_blank" rel="noopener">Government to Regulate Crypto Market</a>
+              <span class="media-outlet"> — ABC Radio National</span>
+            </span>
+            <span class="media-date">Aug 2022</span>
+          </li>
+          <li>
+            <span class="media-type">Quote</span>
+            <span class="media-title">
+              <a href="https://www.theguardian.com/business/2022/aug/14/why-is-the-reserve-bank-of-australia-exploring-digital-currency-options" target="_blank" rel="noopener">Why Is the RBA Exploring Digital Currency Options?</a>
+              <span class="media-outlet"> — The Guardian</span>
+            </span>
+            <span class="media-date">Aug 2022</span>
+          </li>
+          <li>
+            <span class="media-type">TV</span>
+            <span class="media-title">
+              <a href="https://www.abc.net.au/news/2022-06-20/bitcoin-value-plunges-below-$us20,000-for-first/13936460" target="_blank" rel="noopener">Bitcoin Value Plunges Below US$20,000</a>
+              <span class="media-outlet"> — ABC News (live TV)</span>
+            </span>
+            <span class="media-date">Jun 2022</span>
+          </li>
+          <li>
+            <span class="media-type">TV</span>
+            <span class="media-title">
+              <a href="https://www.abc.net.au/4corners/crypto-mania:-behind-the-hype-of-cryptocurrencies/13906076" target="_blank" rel="noopener">Crypto Mania: Behind the Hype of Cryptocurrencies</a>
+              <span class="media-outlet"> — Four Corners, ABC TV</span>
+            </span>
+            <span class="media-date">May 2022</span>
+          </li>
+          <li>
+            <span class="media-type">TV</span>
+            <span class="media-title">
+              <a href="https://twitter.com/GenesisBlockAus/status/1525038683140657152" target="_blank" rel="noopener">Discussing the Crypto Market Crash Live on The Open</a>
+              <span class="media-outlet"> — ausbiz TV</span>
+            </span>
+            <span class="media-date">May 2022</span>
+          </li>
+          <li>
+            <span class="media-type">Quote</span>
+            <span class="media-title">
+              <a href="https://www.afr.com/wealth/investing/smart-small-learn-by-doing-how-to-get-started-in-crypto-20220406-p5ab8b" target="_blank" rel="noopener">'Start Small, Learn by Doing': How to Get Started in Crypto</a>
+              <span class="media-outlet"> — Australian Financial Review</span>
+            </span>
+            <span class="media-date">Apr 2022</span>
+          </li>
+          <li>
+            <span class="media-type">Quote</span>
+            <span class="media-title">
+              <a href="https://intheblack.cpaaustralia.com.au/business-and-finance/how-decentralised-finance-is-defi-ying-the-norm" target="_blank" rel="noopener">How Decentralised Finance Is DeFi-ying the Norm</a>
+              <span class="media-outlet"> — INTHEBLACK by CPA Australia</span>
+            </span>
+            <span class="media-date">Mar 2022</span>
+          </li>
+          <li>
+            <span class="media-type">Interview</span>
+            <span class="media-title">
+              <a href="https://balancethegrind.co/interviews/chloe-white-independent-crypto-asset-consultant/" target="_blank" rel="noopener">Balancing the Grind with Chloe White</a>
+              <span class="media-outlet"> — Balance The Grind</span>
+            </span>
+            <span class="media-date">Jun 2022</span>
+          </li>
+          <li>
+            <span class="media-type">TV</span>
+            <span class="media-title">
+              <a href="https://twitter.com/BreakfastNews/status/1468717521851203585" target="_blank" rel="noopener">Live TV Segment on Government's Crypto Policy Reforms</a>
+              <span class="media-outlet"> — ABC Breakfast News</span>
+            </span>
+            <span class="media-date">Dec 2021</span>
+          </li>
+          <li>
+            <span class="media-type">Quote</span>
+            <span class="media-title">
+              <a href="https://www.afr.com/technology/crypto-experts-praise-treasury-response-dismayed-by-mining-loss-20211208-p59ftm" target="_blank" rel="noopener">Treasury's Crypto Plans Will Supercharge Investment</a>
+              <span class="media-outlet"> — Australian Financial Review</span>
+            </span>
+            <span class="media-date">Dec 2021</span>
+          </li>
+          <li>
+            <span class="media-type">Quote</span>
+            <span class="media-title">
+              <a href="https://www.reuters.com/article/australia-payments-idCNL1N2SS2YB" target="_blank" rel="noopener">Australia Proposes New Laws to Regulate Crypto</a>
+              <span class="media-outlet"> — Reuters</span>
+            </span>
+            <span class="media-date">Dec 2021</span>
+          </li>
+          <li>
+            <span class="media-type">Quote</span>
+            <span class="media-title">
+              <a href="https://7news.com.au/business/cryptocurrency/weird-limbo-for-cryptocurrency-in-2022-c-5094681" target="_blank" rel="noopener">Treasurer's Plans Create a Limbo State for Crypto Investors</a>
+              <span class="media-outlet"> — 7 News</span>
+            </span>
+            <span class="media-date">Dec 2021</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== ROW: PODCASTS ===== -->
+    <div class="accordion-item">
+      <button class="accordion-trigger" data-target="panel-podcasts">
+        Podcasts
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-panel" id="panel-podcasts">
+        <ul class="media-list">
+          <li>
+            <span class="media-type">Interview</span>
+            <span class="media-title">
+              <a href="https://www.youtube.com/watch?v=tE17iblssoQ&list=PL8NRpjCvrDpg2CG5sTx1u2YNXoXf5DYKZ" target="_blank" rel="noopener">Meet Chloe White, Crypto's Go-to Advisor</a>
+              <span class="media-outlet"> — MezFi Podcast</span>
+            </span>
+            <span class="media-date">Jun 2024</span>
+          </li>
+          <li>
+            <span class="media-type">Interview</span>
+            <span class="media-title">
+              <a href="https://open.spotify.com/episode/0gMLqDAafZjG5dyC1US0SW?si=3020ace8abf94ffb" target="_blank" rel="noopener">Outlook for Virtual Assets</a>
+              <span class="media-outlet"> — Bank to the Future 2.0 Podcast</span>
+            </span>
+            <span class="media-date">Oct 2023</span>
+          </li>
+          <li>
+            <span class="media-type">Interview</span>
+            <span class="media-title">
+              <a href="https://www.youtube.com/watch?v=ZWnf5JX0CHM&ab_channel=ProofOfWorkWithShivMehta" target="_blank" rel="noopener">Blockchain Regulation &amp; Policymaking with Chloe White</a>
+              <span class="media-outlet"> — Proof of Work Podcast</span>
+            </span>
+            <span class="media-date">Sep 2023</span>
+          </li>
+          <li>
+            <span class="media-type">Guest &amp; Host</span>
+            <span class="media-title">
+              <a href="https://tieronepeople.com/?s=chloe+white" target="_blank" rel="noopener">Fintech Chatter Podcast / Blockchain News with Dexter Cousins</a>
+              <span class="media-outlet"> — Tier One People</span>
+            </span>
+            <span class="media-date">2021–2023</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /accordion -->
+
+
+  <!-- ===== STATIC STATS ===== -->
+  <div class="stats-row" style="margin-top: 64px;">
+    <div class="stat-item">
+      <span class="stat-number">20</span>
+      <span class="stat-label">TV, Radio &amp; Podcast Interviews</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">40+</span>
+      <span class="stat-label">Journalist Quotes</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">60+</span>
+      <span class="stat-label">Conference Talks</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">2019</span>
+      <span class="stat-label">Public Speaker Since</span>
+    </div>
+  </div>
+
+  <!-- ===== STATS TICKER ===== -->
+  <div class="ticker-wrap" aria-label="Media statistics">
+    <div class="ticker-track">
+      <!-- first copy -->
+      <span class="ticker-item">Australian Financial Review</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">ABC News</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Reuters</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">The Guardian</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Cointelegraph</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">AFR Magazine</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Four Corners</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">CPA Australia</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Stockhead</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">ABC Radio</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">7 News</span>
+      <span class="ticker-sep">·</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item">Australian Financial Review</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">ABC News</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Reuters</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">The Guardian</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Cointelegraph</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">AFR Magazine</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Four Corners</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">CPA Australia</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Stockhead</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">ABC Radio</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">7 News</span>
+      <span class="ticker-sep">·</span>
+    </div>
+  </div>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <p>&copy; 2026 Chloe White &nbsp;·&nbsp; <a href="https://linkedin.com/in/policyeconomist" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+
+<!-- ========== ACCORDION SCRIPT ========== -->
+<script>
+  (function () {
+    var triggers = document.querySelectorAll('.accordion-trigger');
+
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        var targetId = this.getAttribute('data-target');
+        var panel    = document.getElementById(targetId);
+        var icon     = this.querySelector('.accordion-icon');
+        var isOpen   = panel.classList.contains('is-open');
+
+        // Close all panels
+        document.querySelectorAll('.accordion-panel').forEach(function (p) {
+          p.classList.remove('is-open');
+        });
+        document.querySelectorAll('.accordion-icon').forEach(function (i) {
+          i.textContent = '+';
+        });
+
+        // Open clicked panel if it was closed
+        if (!isOpen) {
+          panel.classList.add('is-open');
+          icon.textContent = '−';
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

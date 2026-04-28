@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio — Chloe White</title>
+  <meta name="description" content="Official biography and headshot for Chloe White — Advisor, Regulatory Strategist, Policy Architect.">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ===== BIO PAGE: headshot capped at 50% natural size; wider text column ===== -->
+  <style>
+    /* Desktop: narrower image column, wider text column */
+    @media (min-width: 1025px) {
+      .page-split {
+        grid-template-columns: 35fr 65fr;
+        align-items: start;
+      }
+    }
+    /* All sizes: image never exceeds 50% of its natural dimensions */
+    .page-split .page-image img {
+      width: auto;
+      height: auto;
+      max-width: min(100%, 554px);
+      max-height: 510px;
+      object-fit: unset;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header>
+  <div class="header-inner">
+    <div class="site-name">
+      <a href="index.html">Chloe White</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="bio.html" class="active">Bio</a>
+      <a href="advisory.html">Agency</a>
+      <a href="board.html">Board Roles</a>
+      <a href="community.html">Community</a>
+      <a href="media.html">Media &amp; Speaking</a>
+      <!-- <a href="ai-stablecoins.html">Research</a> -->
+      <a href="recognition.html">Recognition</a>
+      <!-- <a href="art.html">Art</a> -->
+    </nav>
+  </div>
+</header>
+
+<!-- ========== BIO PAGE ========== -->
+<main class="page-split">
+
+  <!-- LEFT: Headshot -->
+  <div class="page-image" style="display:flex; flex-direction:column; align-items:center; padding:40px 28px 28px;">
+    <img src="headshot.png" alt="Chloe White — Headshot">
+    <a href="headshot.png" download="Chloe White Official Headshot.png" class="read-more"
+       style="margin-top:20px; font-size:0.65rem; display:inline-flex; align-items:center; gap:7px; align-self:center;">
+      <svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="6" y1="1" x2="6" y2="8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <polyline points="3,6 6,9 9,6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="1.5" y1="11" x2="10.5" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      DOWNLOAD HEADSHOT
+    </a>
+  </div>
+
+  <!-- RIGHT: Official Bio -->
+  <div class="page-content">
+
+    <!-- ===== LONG BIO ===== -->
+    <div class="content-block" id="long-bio">
+      <p class="section-label">Official Bio</p>
+      <p>
+        Chloe White is one of Australia's most credentialled experts at the intersection of
+        government, finance, and technology. Over a 15-year career in public policy and markets,
+        her work has spanned key authorities including the federal treasury, the foreign service,
+        industry associations, and a foundational advisory role with the Government of Dubai. As a virtual assets
+        specialist since 2017, Chloe has shaped the rules that govern the industry across
+        multiple jurisdictions.
+      </p>
+      <p>
+        Since founding Genesis Block Advisory in 2021 and riskmastery.xyz in 2023, Chloe has
+        directly advised 45+ virtual asset projects across five continents, co-presented systemic
+        risk research at the U.S. Federal Reserve, and chaired the Digital Assets Working Group
+        at DECA, Australia's peak digital economy body; leading policy development for 70+ member
+        organisations. She is recognised in the Top 50 Impact List three consecutive years
+        (2023, 2024, 2025), a dual Blockies Award winner, and a recurring speaker at the world's
+        most significant fintech stages.
+      </p>
+      <button type="button" class="read-more" onclick="copyBio('long-bio', this)" data-label="COPY BIO"
+              style="margin-top:16px; font-size:0.65rem; display:inline-flex; align-items:center; gap:7px; background:none; cursor:pointer; font-family:inherit;">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="2" width="6" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+        </svg>
+        <span class="copy-label">COPY BIO</span>
+      </button>
+    </div>
+
+    <!-- ===== SHORT BIO ===== -->
+    <div class="content-block" id="short-bio">
+      <p class="section-label">Short Version</p>
+      <p>
+        Chloe White is an independent advisor, board member, and former regulator specialising in
+        new finance and technology. She has shaped regulation across multiple
+        jurisdictions, from the Australian Treasury and the National Blockchain Roadmap, to
+        Dubai's Virtual Assets Regulatory Authority. Chloe is appointed within a number of
+        organisations including RMIT University in Melbourne and the BGIN think tank in Tokyo.
+        Her clients have included international exchanges, asset managers, and listed companies,
+        alongside industry associations.
+      </p>
+      <button type="button" class="read-more" onclick="copyBio('short-bio', this)" data-label="COPY BIO"
+              style="margin-top:16px; font-size:0.65rem; display:inline-flex; align-items:center; gap:7px; background:none; cursor:pointer; font-family:inherit;">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="2" width="6" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+        </svg>
+        <span class="copy-label">COPY BIO</span>
+      </button>
+    </div>
+
+  </div>
+</main>
+
+<!-- ========== COPY BIO SCRIPT ========== -->
+<script>
+  function copyBio(sectionId, btn) {
+    var paras = document.querySelectorAll('#' + sectionId + ' p:not(.section-label)');
+    var text = Array.from(paras).map(function(p) { return p.innerText.trim(); }).join('\n\n');
+    var label = btn.querySelector('.copy-label');
+    navigator.clipboard.writeText(text).then(function() {
+      label.textContent = 'COPIED!';
+      setTimeout(function() { label.textContent = btn.dataset.label; }, 2000);
+    });
+  }
+</script>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <p>&copy; 2026 Chloe White &nbsp;·&nbsp; <a href="https://linkedin.com/in/policyeconomist" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>

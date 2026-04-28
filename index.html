@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chloe White — Advisor · Regulatory Strategist · Policy Architect</title>
+  <meta name="description" content="Chloe White — one of Australia's most credentialled experts at the intersection of government policy, financial markets, and emerging technology.">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ===== ABOUT PAGE: hero image flush left + nav, proportionate, no zoom ===== -->
+  <style>
+    /* Constrain the entire hero to a centred container so wide viewports
+       don't produce dead white space to the right. The pair sits centred
+       like a gallery print on a wide wall. */
+    .hero {
+      min-height: 0;
+      align-items: stretch;
+      grid-template-columns: auto 1fr;
+      max-width: calc((961 / 1280) * (100vh - 62px) * 2);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-image {
+      display: block;
+    }
+    .hero-image img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: calc(100vh - 62px); /* flush with nav, never taller than viewport */
+    }
+    /* Right column naturally fills the remaining 1fr — no separate max-width needed */
+    .hero-text .stats-row {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER / NAVIGATION ========== -->
+<header>
+  <div class="header-inner">
+    <div class="site-name">
+      <a href="index.html">Chloe White</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="index.html" class="active">About</a>
+      <a href="bio.html">Bio</a>
+      <a href="advisory.html">Agency</a>
+      <a href="board.html">Board Roles</a>
+      <a href="community.html">Community</a>
+      <a href="media.html">Media &amp; Speaking</a>
+      <!-- <a href="ai-stablecoins.html">Research</a> -->
+      <a href="recognition.html">Recognition</a>
+      <!-- <a href="art.html">Art</a> -->
+    </nav>
+  </div>
+</header>
+
+<!-- ========== HERO SECTION ========== -->
+<main class="hero">
+
+  <!-- LEFT: Hero Image — replace src with your preferred image -->
+  <div class="hero-image">
+    <img src="travel-photo.jpg" alt="Chloe White">
+  </div>
+
+  <!-- RIGHT: Introduction -->
+  <div class="hero-text">
+    <h2>Hi, I'm Chloe.</h2>
+    <p>
+      I grew up in Sydney, Australia, and have also lived in Canberra, Melbourne, Germany,
+      the Netherlands, the UAE, and occasionally, as a nomad.
+    </p>
+    <p>
+      I'm a born optimist, trained in economics and finance. My intellectual interests
+      include entrepreneurship, innovation, and governance. I describe myself as a 'policy
+      economist' to reflect my way of thinking.
+    </p>
+    <p>
+      It's been a pleasure to build a career, two businesses, and numerous community ventures,
+      exploring the intersect of these themes.
+    </p>
+    <p>
+      I split my time across commercial projects, pro bono work, research studies,
+      community-building and board duties; and in my downtime I rotate through various
+      hobbies involving sport, art, and design.
+    </p>
+    <p>Thanks for visiting my site!</p>
+
+    <br>
+    <br>
+    <p class="section-label">Current Location</p>
+    <p style="font-size:0.88rem; color:#333; margin-top:4px; text-transform:uppercase; letter-spacing:1px;"><span id="current-city">Berlin</span></p>
+
+    <!-- ========== STATS 2×2 ========== -->
+    <div class="stats-row" style="grid-template-columns: repeat(2, 1fr); margin-top: auto; padding-top: 36px;">
+      <div class="stat-item" style="text-align:left;">
+        <span class="stat-number"><span id="berlin-time">00:00</span></span>
+        <span class="stat-label">Local Time</span>
+      </div>
+      <div class="stat-item" style="text-align:left;">
+        <span class="stat-number" id="berlin-weather">—</span>
+        <span class="stat-label">Weather Conditions</span>
+      </div>
+      <div class="stat-item" style="text-align:left;">
+        <span class="stat-number">10</span>
+        <span class="stat-label">Cities Visited This Year</span>
+      </div>
+      <div class="stat-item" style="text-align:left;">
+        <span class="stat-number">11</span>
+        <span class="stat-label">Cities Visited Last Year</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ========== LIVE BERLIN CLOCK + WEATHER ========== -->
+<script>
+  /* --- Berlin clock (updates every minute) --- */
+  function updateBerlinTime() {
+    var now = new Date();
+    var berlinStr = now.toLocaleTimeString('en-GB', {
+      timeZone: 'Europe/Berlin',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+    var el = document.getElementById('berlin-time');
+    if (el) el.textContent = berlinStr;
+  }
+  updateBerlinTime();
+  setInterval(updateBerlinTime, 60000);
+
+  /* --- Berlin weather via Open-Meteo (free, no API key) ---
+     Docs: https://open-meteo.com/
+     Returns current temperature + WMO weather code.
+     WMO codes mapped to simple emoji + label below.
+  */
+  (function fetchBerlinWeather() {
+    var url = 'https://api.open-meteo.com/v1/forecast'
+      + '?latitude=52.52&longitude=13.41'
+      + '&current=temperature_2m,weather_code'
+      + '&timezone=Europe%2FBerlin';
+
+    fetch(url)
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var temp = Math.round(data.current.temperature_2m);
+        var code = data.current.weather_code;
+        var emoji = weatherEmoji(code);
+        var el = document.getElementById('berlin-weather');
+        if (el) el.textContent = temp + '°C ' + emoji;
+      })
+      .catch(function() {
+        /* Fail silently — keep the dash placeholder */
+      });
+
+    /* WMO weather code → emoji mapping */
+    function weatherEmoji(code) {
+      if (code === 0) return '☀️';                              /* Clear */
+      if (code <= 3) return '⛅';                                /* Partly cloudy */
+      if (code <= 49) return '☁️';                               /* Overcast / fog */
+      if (code <= 59) return '🌧️';                              /* Drizzle */
+      if (code <= 69) return '🌧️';                              /* Rain */
+      if (code <= 79) return '❄️';                               /* Snow */
+      if (code <= 84) return '🌧️';                              /* Rain showers */
+      if (code <= 86) return '❄️';                               /* Snow showers */
+      if (code <= 99) return '⛈️';                               /* Thunderstorm */
+      return '🌤️';
+    }
+  })();
+</script>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <p>&copy; 2026 Chloe White &nbsp;·&nbsp; <a href="https://linkedin.com/in/policyeconomist" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>
