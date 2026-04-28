@@ -16,6 +16,12 @@
         align-items: start;
       }
     }
+    /* Mobile: show bio text first, headshot below */
+    @media (max-width: 1024px) {
+      .page-split .page-image { order: 2; }
+      .page-split .page-content { order: 1; }
+    }
+
     /* All sizes: image never exceeds 50% of its natural dimensions */
     .page-split .page-image img {
       width: auto;

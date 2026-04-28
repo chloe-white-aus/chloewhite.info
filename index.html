@@ -34,6 +34,20 @@
     .hero-text .stats-row {
       max-width: 100%;
     }
+
+    /* Mobile: stack image above text */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+      }
+      .hero-image img {
+        max-height: 60vw;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
   </style>
 </head>
 <body>

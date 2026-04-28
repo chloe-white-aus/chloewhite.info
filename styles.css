@@ -609,11 +609,21 @@ footer a:hover { color: #1a1a1a; }
 
   .page-container { padding: 36px 20px; }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
-  .cards-grid { grid-template-columns: 1fr; }
+
+  /* Force all cards grids to single column regardless of inline grid-template-columns */
+  .cards-grid { grid-template-columns: 1fr !important; }
+
   .bar-label { width: 100px; font-size: 0.68rem; }
 
-  .styled-table { font-size: 0.76rem; }
+  /* Awards table: scroll horizontally rather than overflow/overlap */
+  .styled-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .styled-table { font-size: 0.76rem; min-width: 480px; }
   .styled-table th, .styled-table td { padding: 8px 10px; }
+  /* Top-align all header cells */
+  .styled-table th { vertical-align: top; }
 
   footer { padding: 24px 20px; }
 }
