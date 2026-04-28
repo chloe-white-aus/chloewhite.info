@@ -21,6 +21,15 @@
     .section-subtitle + p { font-size: 0.84rem; color: #333; }
     .styled-table th:nth-child(1),
     .styled-table td:nth-child(1) { text-align: left; }
+
+    /* Mobile: let browser size columns to content instead of fixed % widths */
+    @media (max-width: 768px) {
+      .styled-table { table-layout: auto; min-width: 0; width: 100%; }
+      .styled-table th:nth-child(1),
+      .styled-table th:nth-child(2),
+      .styled-table th:nth-child(3),
+      .styled-table th:nth-child(4) { width: auto; }
+    }
   </style>
 </head>
 <body>

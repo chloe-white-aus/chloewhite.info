@@ -620,7 +620,7 @@ footer a:hover { color: #1a1a1a; }
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .styled-table { font-size: 0.76rem; min-width: 480px; }
+  .styled-table { font-size: 0.76rem; }
   .styled-table th, .styled-table td { padding: 8px 10px; }
   /* Top-align all header cells */
   .styled-table th { vertical-align: top; }
