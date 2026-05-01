@@ -5,10 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recognition &amp; Awards — Chloe White</title>
   <meta name="description" content="Chloe White's awards, recognition, and testimonials from industry leaders.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- ===== RECOGNITION PAGE: column widths + testimonials note size ===== -->
+  <!-- ===== RECOGNITION PAGE ===== -->
   <style>
+    /* Desktop: image left, content right — same proportions as bio page */
+    @media (min-width: 1025px) {
+      .page-split {
+        grid-template-columns: 35fr 65fr;
+        align-items: start;
+      }
+    }
+    /* Mobile: show image first, content below */
+    @media (max-width: 1024px) {
+      .page-split .page-image { order: 1; }
+      .page-split .page-content { order: 2; }
+    }
+
+    /* Awards image sizing — mirrors headshot constraints */
+    .page-split .page-image img {
+      width: auto;
+      height: auto;
+      max-width: min(100%, 480px);
+      max-height: 520px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
     .styled-table { table-layout: fixed; }
     .styled-table th:nth-child(1) { width: 6%; }
     .styled-table th:nth-child(2) { width: 34%; }
@@ -51,16 +78,24 @@
       <!-- <a href="ai-stablecoins.html">Research</a> -->
       <a href="recognition.html" class="active">Recognition</a>
       <!-- <a href="art.html">Art</a> -->
+      <a href="meet.html">Meet</a>
     </nav>
   </div>
 </header>
 
 <!-- ========== RECOGNITION & AWARDS PAGE ========== -->
-<main class="page-container">
+<main class="page-split">
 
-  <p class="section-label" style="font-size:0.88rem; color:#333;">Awards &amp; Honours</p>
+  <!-- LEFT: Awards photo -->
+  <div class="page-image" style="display:flex; flex-direction:column; align-items:center; padding:60px 28px 28px 48px;">
+    <img src="BlockiesAwards.jpeg" alt="Chloe White — Blockies Awards">
+  </div>
+
+  <!-- RIGHT: Content -->
+  <div class="page-content" style="padding-top: 60px;">
 
   <!-- ===== AWARDS TABLE ===== -->
+  <p class="section-label" style="font-size:0.88rem; color:#333;">Awards &amp; Honours</p>
   <div class="styled-table-wrap">
   <table class="styled-table">
     <thead>
@@ -104,25 +139,25 @@
       </tr>
       <tr>
         <td>2022</td>
-        <td><strong>Professional Advisor of the Year (Blockies)</strong></td>
+        <td><strong>Professional Advisor of the Year</strong></td>
         <td>Finalist</td>
         <td>Blockchain Australia</td>
       </tr>
       <tr>
         <td>2022</td>
-        <td><strong>Blockchain Leader of the Year (Blockies)</strong></td>
+        <td><strong>Blockchain Leader of the Year</strong></td>
         <td>Finalist</td>
         <td>Blockchain Australia</td>
       </tr>
       <tr>
         <td>2021</td>
-        <td><strong>Professional Advisor of the Year (Blockies)</strong></td>
+        <td><strong>Professional Advisor of the Year</strong></td>
         <td>Winner</td>
         <td>Blockchain Australia</td>
       </tr>
       <tr>
         <td>2021</td>
-        <td><strong>Blockchain Leader of the Year (Blockies)</strong></td>
+        <td><strong>Blockchain Leader of the Year</strong></td>
         <td>Winner</td>
         <td>Blockchain Australia</td>
       </tr>
@@ -134,11 +169,12 @@
   <h2 class="section-subtitle">Testimonials</h2>
   <p>Professional references and testimonials are available on request.</p>
 
+  </div><!-- /.page-content -->
 </main>
 
 <!-- ========== FOOTER ========== -->
 <footer>
-  <p>&copy; 2026 Chloe White &nbsp;·&nbsp; <a href="https://linkedin.com/in/policyeconomist" target="_blank" rel="noopener">LinkedIn</a></p>
+  <p><a href="https://linkedin.com/in/policyeconomist" target="_blank" rel="noopener">Chloe White</a> &nbsp;·&nbsp; <a href="meet.html">Book A Call</a></p>
 </footer>
 
 </body>

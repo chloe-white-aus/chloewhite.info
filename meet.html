@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Call — Chloe White</title>
+  <meta name="description" content="Book a call with Chloe White — press enquiries, consulting, or mentoring.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .meet-book-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      background: #1a1a1a;
+      color: #fff;
+      border: 1.5px solid #1a1a1a;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .meet-book-btn:hover { background: #444; color: #fff; border-color: #444; }
+    .cards-grid .card { display: flex; flex-direction: column; }
+    .cards-grid .card .meet-book-btn { margin-top: 24px; align-self: flex-start; }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header>
+  <div class="header-inner">
+    <div class="site-name">
+      <a href="index.html">Chloe White</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="index.html">Hello</a>
+      <a href="bio.html">Profile &amp; Bio</a>
+      <a href="advisory.html">Consulting</a>
+      <a href="board.html">Board Roles</a>
+      <a href="community.html">Community</a>
+      <a href="media.html">Media &amp; Speaking</a>
+      <a href="recognition.html">Recognition</a>
+      <a href="meet.html" class="active">Meet</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== MEET PAGE ========== -->
+<main class="page-container">
+
+  <h1 class="section-title" style="max-width:800px; margin-left:auto; margin-right:auto;">Book a Call</h1>
+
+  <!-- ===== CARDS ===== -->
+  <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin-left: auto; margin-right: auto;">
+
+    <!-- Consulting -->
+    <div class="card">
+      <h3>Expert Consulting</h3>
+      <p>I offer three main ways to work together:</p>
+      <ul style="margin: 8px 0 12px 0; padding-left: 18px; line-height: 1.7; font-size: 0.88rem;">
+        <li><strong>Briefings:</strong> Guidance that hits to-the-point when you're at a crossroads.</li>
+        <li><strong>Scoped Projects:</strong> Deep dives into specific challenges or milestones.</li>
+        <li><strong>Retainers:</strong> Long-term, embedded support as your business evolves.</li>
+      </ul>
+      <p>Ready to talk? Let's find the right model for you.</p>
+      <a class="meet-book-btn" href="https://calendar.app.google/XC6Tfe4UWCA8TJcW6" target="_blank" rel="noopener">
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        BOOK NOW
+      </a>
+    </div>
+
+    <!-- Other -->
+    <div class="card">
+      <h3>Office Hours</h3>
+      <p>I carve out one hour every day for the "unexpected" whether you're a professional seeking a quick mentoring chat, a journalist looking for a quote, or just someone who wants to say hello - my door is open.</p>
+      <p style="font-size: 0.8em; margin-top: 10px;"><span style="text-transform: uppercase; letter-spacing: 2px;">The Fine Print:</span> I love a good conversation, but please respect the space. No unsolicited sales pitches, thanks!</p>
+      <a class="meet-book-btn" href="https://calendar.app.google/QrmuKqyw86SAxjbz5" target="_blank" rel="noopener">
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        BOOK NOW
+      </a>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <p><a href="https://linkedin.com/in/policyeconomist" target="_blank" rel="noopener">Chloe White</a></p>
+</footer>
+
+
+</body>
+</html>
