@@ -2,7 +2,7 @@
 
 > This file is provided for AI agents and automated systems. It contains the full content of chloewhite.info in plain text.
 > Canonical URL: https://chloewhite.info
-> Last updated: 2026-04-28
+> Last updated: 2026-05-16
 
 ---
 
