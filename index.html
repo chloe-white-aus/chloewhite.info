@@ -79,7 +79,7 @@
 <!-- ========== HERO SECTION ========== -->
 <main class="hero">
 
-  <!-- LEFT: Hero Image — replace src with your preferred image -->
+  <!-- LEFT: Hero Image -->
   <div class="hero-image">
     <img src="travel-photo.jpg" alt="Chloe White">
   </div>
@@ -134,9 +134,9 @@
   </div>
 </main>
 
-<!-- ========== LIVE BERLIN CLOCK + WEATHER ========== -->
+<!-- ========== LIVE CLOCK + WEATHER ========== -->
 <script>
-  /* --- Berlin clock (updates every minute) --- */
+  /* --- clock (updates every minute) --- */
   function updateBerlinTime() {
     var now = new Date();
     var berlinStr = now.toLocaleTimeString('en-GB', {
@@ -150,7 +150,7 @@
   updateBerlinTime();
   setInterval(updateBerlinTime, 60000);
 
-  /* --- Berlin weather via Open-Meteo (free, no API key) ---
+  /* --- weather via Open-Meteo (free, no API key) ---
      Docs: https://open-meteo.com/
      Returns current temperature + WMO weather code.
      WMO codes mapped to simple emoji + label below.
@@ -212,5 +212,8 @@
   <p><a href="https://linkedin.com/in/policyeconomist" target="_blank" rel="noopener">Chloe White</a> &nbsp;·&nbsp; <a href="meet.html">Book A Call</a></p>
 </footer>
 
+<!-- 100% privacy-first analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  
 </body>
 </html>
