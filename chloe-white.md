@@ -125,7 +125,7 @@ Appointed by Press Release to advise the CEO of Blockchain Australia, Steve Vall
 ### Mentorship
 Chloe actively mentors founders and professionals in the emerging tech and policy worlds, with a focus on leadership mindset and navigating uncertainty.
 
-- **LinkedIn:** https://linkedin.com/in/policyeconomist — 4.5k followers
+- **LinkedIn:** https://linkedin.com/in/policyeconomist — 4.6k followers
 - **X / Twitter:** https://x.com/ChloeWhiteAus — 3.6k followers
 
 ---
