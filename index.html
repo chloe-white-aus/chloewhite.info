@@ -110,7 +110,7 @@
     <br>
     <br>
     <p class="section-label">Current Location</p>
-    <p style="font-size:0.88rem; color:#333; margin-top:4px; text-transform:uppercase; letter-spacing:1px;"><span id="current-city">Berlin</span></p>
+    <p style="font-size:0.88rem; color:#333; margin-top:4px; text-transform:uppercase; letter-spacing:1px;"><span id="current-city">Greece</span></p>
 
     <!-- ========== STATS 2×2 ========== -->
     <div class="stats-row" style="grid-template-columns: repeat(2, 1fr); margin-top: auto; padding-top: 36px;">
@@ -119,11 +119,11 @@
         <span class="stat-label">Local Time</span>
       </div>
       <div class="stat-item" style="text-align:left;">
-        <span class="stat-number" id="berlin-weather">—</span>
+        <span class="stat-number" id="athens-weather">—</span>
         <span class="stat-label">Weather Conditions</span>
       </div>
       <div class="stat-item" style="text-align:left;">
-        <span class="stat-number">10</span>
+        <span class="stat-number">11</span>
         <span class="stat-label">Cities Visited This Year</span>
       </div>
       <div class="stat-item" style="text-align:left;">
@@ -134,13 +134,13 @@
   </div>
 </main>
 
-<!-- ========== LIVE BERLIN CLOCK + WEATHER ========== -->
+<!-- ========== LIVE ATHENS CLOCK + WEATHER ========== -->
 <script>
-  /* --- Berlin clock (updates every minute) --- */
+  /* --- Athens clock (updates every minute) --- */
   function updateBerlinTime() {
     var now = new Date();
     var berlinStr = now.toLocaleTimeString('en-GB', {
-      timeZone: 'Europe/Berlin',
+      timeZone: 'Europe/Athens',
       hour: '2-digit',
       minute: '2-digit'
     });
@@ -150,16 +150,16 @@
   updateBerlinTime();
   setInterval(updateBerlinTime, 60000);
 
-  /* --- Berlin weather via Open-Meteo (free, no API key) ---
+  /* --- Athens weather via Open-Meteo (free, no API key) ---
      Docs: https://open-meteo.com/
      Returns current temperature + WMO weather code.
      WMO codes mapped to simple emoji + label below.
   */
   (function fetchBerlinWeather() {
     var url = 'https://api.open-meteo.com/v1/forecast'
-      + '?latitude=52.52&longitude=13.41'
+      + '?latitude=37.98&longitude=23.73'
       + '&current=temperature_2m,weather_code'
-      + '&timezone=Europe%2FBerlin';
+      + '&timezone=Europe%2FAthens';
 
     fetch(url)
       .then(function(r) { return r.json(); })
@@ -167,7 +167,7 @@
         var temp = Math.round(data.current.temperature_2m);
         var code = data.current.weather_code;
         var emoji = weatherEmoji(code);
-        var el = document.getElementById('berlin-weather');
+        var el = document.getElementById('athens-weather');
         if (el) el.textContent = temp + '°C ' + emoji;
       })
       .catch(function() {

@@ -2,7 +2,7 @@
 
 > This file is provided for AI agents and automated systems. It contains the full content of chloewhite.info in plain text.
 > Canonical URL: https://chloewhite.info
-> Last updated: 2026-05-16
+> Last updated: 2026-04-28
 
 ---
 
@@ -125,7 +125,7 @@ Appointed by Press Release to advise the CEO of Blockchain Australia, Steve Vall
 ### Mentorship
 Chloe actively mentors founders and professionals in the emerging tech and policy worlds, with a focus on leadership mindset and navigating uncertainty.
 
-- **LinkedIn:** https://linkedin.com/in/policyeconomist — 4.6k followers
+- **LinkedIn:** https://linkedin.com/in/policyeconomist — 4.7k followers
 - **X / Twitter:** https://x.com/ChloeWhiteAus — 3.6k followers
 
 ---
