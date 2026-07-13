@@ -110,20 +110,22 @@
     <br>
     <br>
     <p class="section-label">Current Location</p>
-    <p style="font-size:0.88rem; color:#333; margin-top:4px; text-transform:uppercase; letter-spacing:1px;"><span id="current-city">Berlin</span></p>
+    <!-- The text below is filled in automatically from the LOCATION box in the script
+         at the bottom of this file. To change your location, edit that box — not here. -->
+    <p style="font-size:0.88rem; color:#333; margin-top:4px; text-transform:uppercase; letter-spacing:1px;"><span id="location-label">—</span></p>
 
     <!-- ========== STATS 2×2 ========== -->
     <div class="stats-row" style="grid-template-columns: repeat(2, 1fr); margin-top: auto; padding-top: 36px;">
       <div class="stat-item" style="text-align:left;">
-        <span class="stat-number"><span id="berlin-time">00:00</span></span>
+        <span class="stat-number"><span id="local-time">00:00</span></span>
         <span class="stat-label">Local Time</span>
       </div>
       <div class="stat-item" style="text-align:left;">
-        <span class="stat-number" id="athens-weather">—</span>
+        <span class="stat-number" id="local-weather">—</span>
         <span class="stat-label">Weather Conditions</span>
       </div>
       <div class="stat-item" style="text-align:left;">
-        <span class="stat-number">11</span>
+        <span class="stat-number">12</span>
         <span class="stat-label">Cities Visited This Year</span>
       </div>
       <div class="stat-item" style="text-align:left;">
@@ -134,32 +136,61 @@
   </div>
 </main>
 
-<!-- ========== LIVE ATHENS CLOCK + WEATHER ========== -->
+<!-- ========== LIVE LOCATION · CLOCK · WEATHER ========== -->
 <script>
-  /* --- Athens clock (updates every minute) --- */
-  function updateBerlinTime() {
+  /* ================================================================
+     ★  UPDATE YOUR LOCATION HERE — THIS IS THE ONLY PLACE TO EDIT  ★
+     ================================================================
+     Change the four fields below whenever you move. Everything on the
+     page — the "Current Location" label, the live clock, and the live
+     weather — reads from this one box, so nothing can fall out of sync.
+
+       label     = the words shown under "Current Location" (free text)
+       timezone  = IANA time-zone name, drives the live clock
+       latitude  = for the live weather (decimal degrees)
+       longitude = for the live weather (decimal degrees)
+
+     Look up a city's timezone and coordinates at https://open-meteo.com/
+     ================================================================ */
+  var LOCATION = {
+    label:     "Frankfurt, Germany",
+    timezone:  "Europe/Berlin",
+    latitude:  50.11,
+    longitude: 8.68
+  };
+  /* ==== Nothing below needs editing when you change location ==== */
+
+
+  /* --- Show the location label --- */
+  (function showLocationLabel() {
+    var el = document.getElementById('location-label');
+    if (el) el.textContent = LOCATION.label;
+  })();
+
+  /* --- Live local clock (updates every minute) --- */
+  function updateLocalTime() {
     var now = new Date();
-    var berlinStr = now.toLocaleTimeString('en-GB', {
-      timeZone: 'Europe/Berlin',
+    var timeStr = now.toLocaleTimeString('en-GB', {
+      timeZone: LOCATION.timezone,
       hour: '2-digit',
       minute: '2-digit'
     });
-    var el = document.getElementById('berlin-time');
-    if (el) el.textContent = berlinStr;
+    var el = document.getElementById('local-time');
+    if (el) el.textContent = timeStr;
   }
-  updateBerlinTime();
-  setInterval(updateBerlinTime, 60000);
+  updateLocalTime();
+  setInterval(updateLocalTime, 60000);
 
-  /* --- Athens weather via Open-Meteo (free, no API key) ---
+  /* --- Live weather via Open-Meteo (free, no API key) ---
      Docs: https://open-meteo.com/
      Returns current temperature + WMO weather code.
      WMO codes mapped to simple emoji + label below.
   */
-  (function fetchBerlinWeather() {
+  (function fetchLocalWeather() {
     var url = 'https://api.open-meteo.com/v1/forecast'
-      + '?latitude=37.98&longitude=23.73'
+      + '?latitude=' + LOCATION.latitude + '&longitude=' + LOCATION.longitude
       + '&current=temperature_2m,weather_code'
-      + '&timezone=Europe%2FBerlin';
+      + '&timezone=' + encodeURIComponent(LOCATION.timezone);
 
     fetch(url)
       .then(function(r) { return r.json(); })
@@ -167,7 +198,7 @@
         var temp = Math.round(data.current.temperature_2m);
         var code = data.current.weather_code;
         var emoji = weatherEmoji(code);
-        var el = document.getElementById('athens-weather');
+        var el = document.getElementById('local-weather');
         if (el) el.textContent = temp + '°C ' + emoji;
       })
       .catch(function() {
